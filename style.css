@@ -1,0 +1,294 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 25px;
+    background-color: #e8f1fa;
+    font-family: Arial, sans-serif;
+    color: #24344d;
+}
+
+
+.jayden-container {
+    max-width: 1000px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    grid-template-areas:
+        "profile identity"
+        "hobbies achievements"
+        "music dream"
+        "music vacation"
+        "food friends";
+    gap: 15px;
+    align-items: stretch;
+}
+
+
+.jayden-profile-photo { grid-area: profile; }
+.jayden-identity { grid-area: identity; }
+.jayden-hobbies { grid-area: hobbies; }
+.jayden-achievements { grid-area: achievements; }
+.jayden-music { grid-area: music; }
+.jayden-dream { grid-area: dream; }
+.jayden-vacation { grid-area: vacation; }
+.jayden-food { grid-area: food; }
+.jayden-friends { grid-area: friends; }
+
+
+.jayden-profile-photo {
+    background-color: #b9d9f5;
+    padding: 10px;
+    border-radius: 12px;
+}
+
+.jayden-profile-photo img {
+    width: 100%;
+    height: 100%;
+    min-height: 190px;
+    object-fit: cover;
+    border-radius: 8px;
+}.  
+
+.jayden-profile-photo a {
+
+  display: block;
+  width:100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+
+.jayden-identity {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 12px;
+}
+
+.jayden-identity h1 {
+    background-color: #c8e2fa;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 25px;
+}
+
+.jayden-identity-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.jayden-identity-text {
+    flex: 1;
+}
+
+.jayden-school-logo {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+
+.jayden-hobbies {
+    background-color: #fff0b8;
+    padding: 15px;
+    border-radius: 12px;
+}
+
+.jayden-hobby-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.jayden-hobby-content img {
+    width: 45%;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.jayden-hobby-content div {
+    flex: 1;
+}
+
+
+.jayden-achievements {
+    background-color: #f8d5ed;
+    padding: 15px;
+    border-radius: 12px;
+}
+
+.jayden-achievement-content {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.jayden-achievement-content div {
+    flex: 1;
+}
+
+.jayden-achievement-content img {
+    width: 35%;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+
+.jayden-music {
+    background-color: #f5dada;
+    padding: 15px;
+    border-radius: 12px;
+}
+
+.jayden-music ul {
+    padding-left: 20px;
+}
+
+.jayden-main-singer {
+    text-align: center;
+    margin-top: 12px;
+}
+
+.jayden-main-singer img {
+    width: 100%;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.jayden-singer-list {
+    display: flex;
+    gap: 10px;
+}
+
+.jayden-singer-list > div {
+    flex: 1;
+    min-width: 0;
+    text-align: center;
+}
+
+.jayden-singer-list img {
+    width: 100%;
+    height: 85px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+
+.jayden-dream {
+    background-color: #d9efd9;
+    padding: 15px;
+    border-radius: 12px;
+}
+
+.jayden-dream-content {
+    display: grid;
+    grid-template-columns: 1fr 110px 1fr;
+    align-items: center;
+    gap: 10px;
+}
+
+.jayden-dream-photo {
+    height: 125px;
+    background-color: rgba(255, 255, 255, 0.65);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.jayden-dream-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+
+.jayden-vacation {
+    background-color: #fff0b8;
+    padding: 15px;
+    border-radius: 12px;
+}
+
+
+.jayden-food {
+    background-color: #f8d5ed;
+    padding: 15px;
+    border-radius: 12px;
+}
+
+
+.jayden-friends {
+    background-color: #d5e5fa;
+    padding: 15px;
+    border-radius: 12px;
+}
+
+.jayden-friends-photo {
+    width: 100%;
+    height: 140px;
+    background-color: rgba(255, 255, 255, 0.65);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.jayden-friends-photo img {
+    width: 100%;
+    height: auto;
+    
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+
+h2 {
+    margin-top: 5px;
+    color: #294c73;
+}
+
+h3 {
+    color: #294c73;
+}
+
+p {
+    line-height: 1.5;
+}
+
+
+@media (max-width: 600px) {
+    body {
+        padding: 12px;
+    }
+
+    .jayden-container {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "profile"
+            "identity"
+            "hobbies"
+            "achievements"
+            "music"
+            "dream"
+            "vacation"
+            "food"
+            "friends";
+    }
+
+    .jayden-profile-photo img {
+        height: 220px;
+    }
+
+    .jayden-dream-content {
+        grid-template-columns: 1fr;
+    }
+
+    .jayden-dream-photo {
+        height: 150px;
+    }
+}
